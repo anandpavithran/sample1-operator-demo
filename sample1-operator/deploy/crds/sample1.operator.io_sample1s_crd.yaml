@@ -1,0 +1,22 @@
+apiVersion: apiextensions.k8s.io/v1beta1
+kind: CustomResourceDefinition
+metadata:
+  name: sample1s.sample1.operator.io
+spec:
+  group: sample1.operator.io
+  names:
+    kind: Sample1
+    listKind: Sample1List
+    plural: sample1s
+    singular: sample1
+  scope: Namespaced
+  subresources:
+    status: {}
+  validation:
+    openAPIV3Schema:
+      type: object
+      x-kubernetes-preserve-unknown-fields: true
+  versions:
+  - name: v1
+    served: true
+    storage: true

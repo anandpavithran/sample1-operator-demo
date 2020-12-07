@@ -1,0 +1,5 @@
+---
+- version: v1
+  group: sample1.operator.io
+  kind: Sample1
+  role: sample1

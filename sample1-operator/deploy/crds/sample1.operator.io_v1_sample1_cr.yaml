@@ -1,0 +1,7 @@
+apiVersion: sample1.operator.io/v1
+kind: Sample1
+metadata:
+  name: example-sample1
+spec:
+  # Add fields here
+  size: 3
