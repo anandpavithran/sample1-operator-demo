@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: Subscription
+metadata:
+  name: sample1-operator
+  namespace: sample1-operator
+spec:
+  channel: "4.5"
+  name: example-operators
+  source: gls-operators
+  sourceNamespace: sample1-operator
