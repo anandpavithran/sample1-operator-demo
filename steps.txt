@@ -1,0 +1,14 @@
+  1]  git clone https://github.com/anandpavithran/operator-demo
+  2]  oc new-project weboperator
+  3] cd operator-demo/
+  4] cd weboperator/
+  5]  cd deploy/
+  6]  oc create sa weboperator
+  7]#[not require]  oc create clusterrole weboperator --verb=* --resource=* 
+  8]  oc adm policy add-cluster-role-to-user cluster-admin -z weboperator
+  9]  oc create -fcrds/web.operator.io_webs_crd.yaml 
+  10]  oc create -f operator.yaml 
+  11]  oc get deployment
+  12]  oc get web
+  13]  oc create -f crds/web.operator.io_v1_web_cr.yaml 
+  14]  oc projects | grep web
