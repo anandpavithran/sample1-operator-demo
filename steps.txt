@@ -1,14 +1,22 @@
-  1]  git clone https://github.com/anandpavithran/operator-demo
-  2]  oc new-project weboperator
-  3] cd operator-demo/
-  4] cd weboperator/
-  5]  cd deploy/
-  6]  oc create sa weboperator
-  7]#[not require]  oc create clusterrole weboperator --verb=* --resource=* 
-  8]  oc adm policy add-cluster-role-to-user cluster-admin -z weboperator
-  9]  oc create -fcrds/web.operator.io_webs_crd.yaml 
-  10]  oc create -f operator.yaml 
-  11]  oc get deployment
-  12]  oc get web
-  13]  oc create -f crds/web.operator.io_v1_web_cr.yaml 
-  14]  oc projects | grep web
+
+1]  operator-sdk new web --kind=Web --api-version=web.operator.io/v1 --type=ansible 
+2]  vim tasks/main.yml [ADD PLAYBOOK TO ROLE]
+3]  operator-sdk build quay.io/anandpavithran/web
+4]  git clone https://github.com/anandpavithran/operator-demo
+5]  oc new-project weboperator
+6] cd operator-demo/
+7] cd weboperator/
+8]  cd deploy/
+9]  oc create sa weboperator
+10]#[not require]  oc create clusterrole weboperator --verb=* --resource=* 
+11]  oc adm policy add-cluster-role-to-user cluster-admin -z weboperator
+12]  oc create -fcrds/web.operator.io_webs_crd.yaml 
+13]  oc create -f operator.yaml 
+14]  oc get deployment
+15]  oc get web
+16]  oc create -f crds/web.operator.io_v1_web_cr.yaml 
+17]  oc projects | grep web
+
+
+
+
