@@ -18,5 +18,5 @@
 17]  oc projects | grep web
 
 
-
+https://itnext.io/a-practical-kubernetes-operator-using-ansible-an-example-d3a9d3674d5b
 
