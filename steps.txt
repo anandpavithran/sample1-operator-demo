@@ -19,4 +19,4 @@
 
 
 https://itnext.io/a-practical-kubernetes-operator-using-ansible-an-example-d3a9d3674d5b
-
+https://trstringer.com/extending-k8s-custom-controllers/
